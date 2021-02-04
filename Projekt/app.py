@@ -40,9 +40,12 @@ def galerija():
 def pricing():
     return render_template("pricing.html")
 
-@app.route("/checkout.html")
-def checkout():
-    return render_template("checkout.html")
+@app.route("/checkout.html/<id>")
+def checkout(id):
+    
+
+    
+    return render_template("checkout.html", id = id)
 
 @app.route("/zahvala.html")
 def zahvala():
