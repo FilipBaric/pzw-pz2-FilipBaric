@@ -18,7 +18,7 @@ Komponente koje su korištene s **Bootstrap** su:
 
 Nadogradnja prvog projekta.
 
-###Kako se otvori stranica?
+### Kako se otvori stranica?
 
 --Prvo trebate otvoriti virtualni enviroment s komandom u terminalu: venv\Scripts\activate
 
