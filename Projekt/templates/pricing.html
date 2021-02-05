@@ -81,9 +81,12 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">POLU PANSION<small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>3999,99 HRK</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="checkout.html/0">Odaberi</a></button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="background-color: rgb(90, 99, 230);"><div>
+          {% for a in apartmani %}
+            <li style="color: whitesmoke;"><a href="{{url_for('checkout', id = a.id)}}" style="color: whitesmoke;">{{ a.naslov }}</a>, cijena: {{a.cijena}}</li>
+          {% endfor %}
+        </div></button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -93,9 +96,12 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">PUNI PANSION<small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>7999,99 HRK</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="checkout.html/1">Odaberi</a></button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="background-color: rgb(90, 99, 230);"><div>
+          {% for a in apartmani %}
+            <li style="color: whitesmoke;"><a href="{{url_for('checkout', id = a.id)}}" style="color: whitesmoke;">{{ a.naslov }}</a>, cijena: {{a.cijena}}</li>
+          {% endfor %}
+        </div></button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -105,9 +111,12 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">MEDENI MJESEC<small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>4999,99 HRK</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="checkout.html/2">Odaberi</a></button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="background-color: rgb(90, 99, 230);"><div>
+          {% for a in apartmani %}
+            <li style="color: whitesmoke;"><a href="{{url_for('checkout', id = a.id)}}" style="color: whitesmoke;">{{ a.naslov }}</a>, cijena: {{a.cijena}}</li>
+          {% endfor %}
+        </div></button>
       </div>
     </div>
   </div>

@@ -4,6 +4,12 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
 
+apartmani = [
+    {"id": 1, "naslov": "Apartman 1", "cijena": 3999},
+    {"id": 2, "naslov": "Apartman 2", "cijena": 6999},
+    {"id": 3, "naslov": "Apartman 3", "cijena": 8999}
+]
+
 app = Flask(__name__)
 Bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = "TAJNIKLJUC"
@@ -38,14 +44,12 @@ def galerija():
 
 @app.route("/pricing.html")
 def pricing():
-    return render_template("pricing.html")
+    return render_template("pricing.html", apartmani = apartmani)
 
 @app.route("/checkout.html/<id>")
 def checkout(id):
-    
-
-    
-    return render_template("checkout.html", id = id)
+    apartman = [a for a in apartmani if a["id"] == int(id) ][0]
+    return render_template("checkout.html", apartman = apartman)
 
 @app.route("/zahvala.html")
 def zahvala():
